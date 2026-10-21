@@ -47,11 +47,11 @@ Submissions will arrive by email and appear in the Formspree dashboard.
 
 ## Point philantree.com at GitHub (Namecheap)
 
-In Namecheap: **Domain List → philantree.com → Manage → Advanced DNS**.
+As of October 2026 the domain's nameservers still pointed to Wix (`ns14/ns15.wixdns.net`), so DNS was controlled by Wix, not Namecheap. Email uses Namecheap Private Email (`mx1/mx2.privateemail.com`).
 
-Remove any old Wix records (A records or CNAMEs pointing to Wix). **Don't remove MX or TXT records used for email.**
-
-Add:
+1. In Namecheap: **Domain List → philantree.com → Manage → Domain** tab. Under **Nameservers**, choose **Namecheap BasicDNS** and save.
+2. Go to the **Advanced DNS** tab. Under **Mail Settings**, choose **Private Email**. That restores the email records (MX and SPF).
+3. Under **Host Records**, delete any default parking records, then add:
 
 | Type | Host | Value |
 |---|---|---|
